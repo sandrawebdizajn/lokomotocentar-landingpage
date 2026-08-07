@@ -32,6 +32,9 @@
 <style>
   html { scroll-behavior:smooth; }
   @media (max-width:899px) { body { padding-bottom:76px; } }
+  @supports (-webkit-touch-callout: none) {
+    #sticky-cta { padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px)); }
+  }
   [id] { scroll-margin-top:88px; }
   @media (max-width:900px) { [id] { scroll-margin-top:72px; } }
   body { margin:0; background:#F1F5F8; color:#16212B; font-family:'Source Sans 3',system-ui,sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
@@ -499,7 +502,7 @@
   </footer>
 
   <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
-    <div style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#0E3F6E; border-top:1px solid #2C5F8F; padding:10px 16px; padding-bottom:max(10px, env(safe-area-inset-bottom, 10px)); box-shadow:0 -4px 16px rgba(0,0,0,0.08); transition:transform 0.25s ease; transform:{{ stickyTransform }}">
+    <div style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#0E3F6E; border-top:1px solid #2C5F8F; padding:10px 16px; box-sizing:border-box; box-shadow:0 -4px 16px rgba(0,0,0,0.08); transition:transform 0.25s ease; transform:{{ stickyTransform }}" id="sticky-cta">
       <a href="#prijava" style="display:flex; align-items:center; justify-content:center; min-height:48px; padding:14px 20px; background:#12699A; color:#fff; border-radius:12px; font-family:'Archivo',sans-serif; font-weight:700; font-size:16px; line-height:1" style-hover="background:#0D5480">{{ stickyLabel }}</a>
     </div>
   </sc-if>
