@@ -304,7 +304,7 @@
     <div style="max-width:1180px; margin:0 auto; padding:clamp(56px,7vw,84px) clamp(20px,4vw,24px)">
       <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#79C04A; margin-bottom:16px">Investicija u edukaciju</div>
       <h2 style="font-size:clamp(27px,3.6vw,42px); line-height:1.14; margin-bottom:20px; max-width:26ch">Dva dana praktičnog rada, materijali i podrška nakon edukacije</h2>
-      <p style="font-size:18px; line-height:1.65; color:#BFD3E3; max-width:70ch; margin-bottom:40px">Sve što si video do sada — sistem procene, program oba dana, praktičan rad u parovima i materijali — ulazi u jednu kotizaciju. Ispod je tačan spisak.</p>
+      <p style="font-size:18px; line-height:1.65; color:#BFD3E3; max-width:70ch; margin-bottom:40px">Sve što si video do sada, sistem procene, program oba dana, praktičan rad u parovima i materijali, ulazi u jednu kotizaciju. Ispod je tačan spisak.</p>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr)); gap:clamp(24px,3vw,36px); margin-bottom:clamp(32px,4vw,44px)">
         <div>
           <h3 style="font-size:14px; letter-spacing:0.12em; text-transform:uppercase; color:#79C04A; margin-bottom:16px">Dva dana uživo</h3>
@@ -498,7 +498,7 @@
   </footer>
 
   <sc-if value="{{ showSticky }}" hint-placeholder-val="{{ false }}">
-    <div style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#0E3F6E; border-top:1px solid #2C5F8F; padding:10px 20px calc(10px + env(safe-area-inset-bottom))">
+    <div style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#0E3F6E; border-top:1px solid #2C5F8F; padding:10px 20px; padding-bottom:calc(10px + env(safe-area-inset-bottom, 0px)); box-shadow:0 -6px 20px rgba(14,63,110,0.18); -webkit-transform:translateZ(0); transform:translateZ(0)">
       <a href="#prijava" style="display:flex; align-items:center; justify-content:center; min-height:48px; padding:0 22px; background:#12699A; color:#fff; border-radius:12px; font-family:'Archivo',sans-serif; font-weight:700; font-size:16px" style-hover="background:#0D5480">{{ stickyLabel }}</a>
     </div>
   </sc-if>
