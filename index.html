@@ -25,7 +25,7 @@
 <meta name="twitter:image" content="https://sandrawebdizajn.github.io/lokomotocentar-landingpage/mediji/og-lokomoto.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"EducationEvent","name":"Procena i rehabilitacija bola u donjem delu leđa","startDate":"2026-10-31","endDate":"2026-11-01","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","eventStatus":"https://schema.org/EventScheduled","inLanguage":"sr","description":"Dvodnevna praktična edukacija za fizioterapeute, trenere i fizijatre o proceni i rehabilitaciji bola u donjem delu leđa.","location":{"@type":"Place","name":"Lokomoto Centar","address":{"@type":"PostalAddress","streetAddress":"Tabanovačka 27b","addressLocality":"Beograd","addressCountry":"RS"}},"organizer":{"@type":"Organization","name":"Lokomoto Centar","url":"https://lokomoto.rs/"},"performer":{"@type":"Person","name":"Novak Ilić"},"maximumAttendeeCapacity":20,"offers":{"@type":"Offer","price":"399","priceCurrency":"EUR","availability":"https://schema.org/InStock","url":"#prijava"}}
 </script>
@@ -33,12 +33,12 @@
   html { scroll-behavior:smooth; }
   [id] { scroll-margin-top:88px; }
   @media (max-width:900px) { [id] { scroll-margin-top:72px; } }
-  body { margin:0; background:#F1F5F8; color:#16212B; font-family:'Lato',system-ui,sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
-  * { box-sizing:border-box; min-width:0; }
+  body { margin:0; background:#F1F5F8; color:#16212B; font-family:'Source Sans 3',system-ui,sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  * { box-sizing:border-box; min-width:0; font-synthesis:none; -webkit-font-smoothing:antialiased; }
   img { max-width:100%; }
   a { color:#0E3F6E; text-decoration:none; }
   a:hover { color:#12699A; }
-  h1,h2,h3,h4 { margin:0; font-family:'Raleway',system-ui,sans-serif; font-weight:800; letter-spacing:-0.015em; text-wrap:balance; }
+  h1,h2,h3,h4 { margin:0; font-family:'Archivo',system-ui,sans-serif; font-weight:800; letter-spacing:-0.015em; text-wrap:balance; }
   p { margin:0; }
   p, li, summary, label, blockquote, span, h1, h2, h3, h4, a, button { text-wrap:balance; }
   ul,ol { margin:0; padding:0; list-style:none; }
@@ -52,7 +52,7 @@
 
 <div style="width:100%">
 
-  <header style="position:sticky; top:0; z-index:40; background:rgba(241,245,248,0.95); backdrop-filter:blur(10px); border-bottom:1px solid #DCE5EC">
+  <header style="position:sticky; top:0; z-index:40; background:rgba(241,245,248,0.95); backdrop-filter:blur(10px); border-bottom:1px solid #DCE5EC; box-sizing:border-box">
     <div style="max-width:1180px; margin:0 auto; padding:8px clamp(20px,4vw,24px); display:flex; align-items:center; justify-content:space-between; gap:16px">
       <a href="#vrh" style="display:flex; align-items:center; flex:none"><img src="mediji/logo.png" alt="Lokomoto Centar" width="120" height="38" style="height:38px; width:auto; display:block"></a>
       <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
@@ -61,13 +61,12 @@
           <a href="#program" style="color:#5C6A75" style-hover="color:#12699A">Program</a>
           <a href="#sta-dobijas" style="color:#5C6A75" style-hover="color:#12699A">Šta dobijaš</a>
           <a href="#predavac" style="color:#5C6A75" style-hover="color:#12699A">Predavač</a>
-          <a href="#prijava" style="color:#5C6A75" style-hover="color:#12699A">Cena i prijava</a>
           <a href="#faq" style="color:#5C6A75" style-hover="color:#12699A">Najčešća pitanja</a>
         </nav>
       </sc-if>
       <div style="display:flex; align-items:center; gap:10px; flex:none">
         <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-          <a href="#forma" style="display:inline-flex; align-items:center; min-height:48px; padding:0 20px; background:#12699A; color:#fff; border-radius:12px; font-weight:700; font-size:15px" style-hover="background:#0D5480">Prijavi se</a>
+          <a href="#prijava" style="display:inline-flex; align-items:center; min-height:48px; padding:0 20px; background:#12699A; color:#fff; border-radius:12px; font-weight:700; font-size:15px" style-hover="background:#0D5480">Cena i prijava</a>
         </sc-if>
         <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
           <button type="button" onClick="{{ toggleMenu }}" aria-label="Meni" aria-expanded="{{ menuOpen }}" style="width:48px; height:48px; display:grid; place-content:center; gap:5px; background:#fff; border:1px solid #DCE5EC; border-radius:12px; cursor:pointer">
@@ -79,14 +78,13 @@
       </div>
     </div>
     <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-      <nav style="border-top:1px solid #DCE5EC; background:#fff; padding:8px 20px 16px; display:grid">
+      <nav style="position:absolute; left:0; right:0; top:100%; z-index:41; border-top:1px solid #DCE5EC; border-bottom:1px solid #DCE5EC; background:#fff; box-shadow:0 12px 24px rgba(14,63,110,0.12); padding:8px 20px 16px; display:grid">
         <a href="#za-koga" onClick="{{ closeMenu }}" style="padding:14px 0; border-bottom:1px solid #E7EEF3; font-size:16px; font-weight:700; color:#0E3F6E">Za koga je</a>
         <a href="#program" onClick="{{ closeMenu }}" style="padding:14px 0; border-bottom:1px solid #E7EEF3; font-size:16px; font-weight:700; color:#0E3F6E">Program</a>
         <a href="#sta-dobijas" onClick="{{ closeMenu }}" style="padding:14px 0; border-bottom:1px solid #E7EEF3; font-size:16px; font-weight:700; color:#0E3F6E">Šta dobijaš</a>
         <a href="#predavac" onClick="{{ closeMenu }}" style="padding:14px 0; border-bottom:1px solid #E7EEF3; font-size:16px; font-weight:700; color:#0E3F6E">Predavač</a>
-        <a href="#prijava" onClick="{{ closeMenu }}" style="padding:14px 0; border-bottom:1px solid #E7EEF3; font-size:16px; font-weight:700; color:#0E3F6E">Cena i prijava</a>
         <a href="#faq" onClick="{{ closeMenu }}" style="padding:14px 0; border-bottom:1px solid #E7EEF3; font-size:16px; font-weight:700; color:#0E3F6E">Najčešća pitanja</a>
-        <a href="#forma" onClick="{{ closeMenu }}" style="margin-top:14px; display:flex; align-items:center; justify-content:center; min-height:48px; padding:0 20px; background:#12699A; color:#fff; border-radius:12px; font-weight:700; font-size:16px" style-hover="background:#0D5480">Prijavi se</a>
+        <a href="#prijava" onClick="{{ closeMenu }}" style="margin-top:14px; display:flex; align-items:center; justify-content:center; min-height:48px; padding:0 20px; background:#12699A; color:#fff; border-radius:12px; font-weight:700; font-size:16px" style-hover="background:#0D5480">Cena i prijava</a>
       </nav>
     </sc-if>
   </header>
@@ -106,7 +104,7 @@
           <li style="display:grid; gap:4px"><span style="font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:#5C6A75">Koliko nas?</span><span style="font-size:17px; font-weight:700; line-height:1.45; color:#0E3F6E">Grupa od 20 polaznika</span></li>
         </ul>
         <div style="display:flex; flex-wrap:wrap; gap:14px; align-items:center">
-          <a href="#program" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 30px; background:#12699A; color:#fff; border-radius:14px; font-family:'Raleway',sans-serif; font-weight:700; font-size:17px" style-hover="background:#0D5480">Pogledaj program edukacije</a>
+          <a href="#program" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 30px; background:#12699A; color:#fff; border-radius:14px; font-family:'Archivo',sans-serif; font-weight:700; font-size:17px" style-hover="background:#0D5480">Pogledaj program edukacije</a>
           <a href="#prijava" style="display:inline-flex; align-items:center; min-height:52px; font-weight:700; font-size:16px; color:#0E3F6E; border-bottom:1px solid #C3D0DA" style-hover="color:#12699A; border-color:#12699A">Cena i šta je uključeno →</a>
         </div>
       </div>
@@ -120,16 +118,16 @@
       <h2 style="font-size:clamp(27px,3.6vw,42px); line-height:1.14; max-width:36ch; margin-bottom:22px">Znaš mnogo vežbi.<br>Ali kako biraš pravu za pacijenta ispred sebe?</h2>
       <p style="font-size:18px; line-height:1.65; color:#42525F; max-width:65ch; margin-bottom:36px">Već poznaješ anatomiju, testove i različite tehnike. Problem nastaje kada sve to treba povezati u odluku koja odgovara nalazu i trenutnom kapacitetu konkretnog pacijenta.</p>
       <ol style="display:grid; border-top:1px solid #DCE5EC; max-width:900px">
-        <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Raleway',sans-serif; font-weight:800; font-size:14px; color:#12699A">01</span><span style="font-size:17px; line-height:1.55">Ista terapija kod jednog pacijenta daje rezultat, a kod drugog ne, bez jasnog objašnjenja zašto.</span></li>
-        <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Raleway',sans-serif; font-weight:800; font-size:14px; color:#12699A">02</span><span style="font-size:17px; line-height:1.55">Nisi siguran koju vežbu da izabereš za trenutni nalaz i kapacitet pacijenta.</span></li>
-        <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Raleway',sans-serif; font-weight:800; font-size:14px; color:#12699A">03</span><span style="font-size:17px; line-height:1.55">Ne znaš kada je vreme za sledeću fazu ili veće opterećenje.</span></li>
-        <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Raleway',sans-serif; font-weight:800; font-size:14px; color:#12699A">04</span><span style="font-size:17px; line-height:1.55">Pasivni tretman donese olakšanje, ali se problem ponovo vraća.</span></li>
-        <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Raleway',sans-serif; font-weight:800; font-size:14px; color:#12699A">05</span><span style="font-size:17px; line-height:1.55">Kada napredak izostane, menjaš pristup bez jasnog kriterijuma šta pokušavaš da promeniš.</span></li>
+        <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; color:#12699A">01</span><span style="font-size:17px; line-height:1.55">Ista terapija kod jednog pacijenta daje rezultat, a kod drugog ne, bez jasnog objašnjenja zašto.</span></li>
+        <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; color:#12699A">02</span><span style="font-size:17px; line-height:1.55">Nisi siguran koju vežbu da izabereš za trenutni nalaz i kapacitet pacijenta.</span></li>
+        <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; color:#12699A">03</span><span style="font-size:17px; line-height:1.55">Ne znaš kada je vreme za sledeću fazu ili veće opterećenje.</span></li>
+        <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; color:#12699A">04</span><span style="font-size:17px; line-height:1.55">Pasivni tretman donese olakšanje, ali se problem ponovo vraća.</span></li>
+        <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; color:#12699A">05</span><span style="font-size:17px; line-height:1.55">Kada napredak izostane, menjaš pristup bez jasnog kriterijuma šta pokušavaš da promeniš.</span></li>
       </ol>
       <div style="margin-top:40px; background:#0E3F6E; color:#fff; border-radius:16px; padding:clamp(28px,4vw,44px)">
         <h3 style="font-size:clamp(24px,3.2vw,36px); line-height:1.12; margin-bottom:20px">Vežba nije rešenje. Vežba je alat.</h3>
         <p style="font-size:18px; line-height:1.65; color:#BFD3E3; max-width:65ch; margin-bottom:26px">Ova edukacija ne daje još jednu listu vežbi za određenu dijagnozu. Uči te kako da prikupiš relevantne informacije, protumačiš nalaz, izabereš odgovarajući alat i proceniš kada je vreme za sledeći korak.</p>
-        <blockquote style="margin:0 0 20px; border-left:3px solid #79C04A; padding-left:22px; font-family:'Raleway',sans-serif; font-weight:700; font-size:clamp(19px,2.2vw,25px); line-height:1.4; color:#79C04A">Razlika je kao između nekoga ko ima recept i nekoga ko ume da kuva.</blockquote>
+        <blockquote style="margin:0 0 20px; border-left:3px solid #79C04A; padding-left:22px; font-family:'Archivo',sans-serif; font-weight:700; font-size:clamp(19px,2.2vw,25px); line-height:1.4; color:#79C04A">Razlika je kao između nekoga ko ima recept i nekoga ko ume da kuva.</blockquote>
         <p style="font-size:17.5px; line-height:1.6; color:#E6EEF5; max-width:60ch">Onaj ko razume proces može da se prilagodi i situaciji koju ranije nije video.</p>
       </div>
     </div>
@@ -141,22 +139,22 @@
       <h2 style="font-size:clamp(27px,3.6vw,42px); line-height:1.14; margin-bottom:36px">Jedan sistem povezuje sve faze rehabilitacije</h2>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr)); gap:16px">
         <div style="background:#F1F5F8; border:1px solid #DCE5EC; border-radius:16px; padding:26px">
-          <div style="font-family:'Raleway',sans-serif; font-weight:800; font-size:14px; color:#12699A; letter-spacing:0.08em; margin-bottom:12px">FAZA 1</div>
+          <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; color:#12699A; letter-spacing:0.08em; margin-bottom:12px">FAZA 1</div>
           <h3 style="font-size:20px; margin-bottom:10px">Akutna faza</h3>
           <p style="font-size:16.5px; line-height:1.6; color:#42525F">Proceni iritabilnost, trenutni kapacitet i način da pacijentu bezbedno vratiš osnovni pokret.</p>
         </div>
         <div style="background:#F1F5F8; border:1px solid #DCE5EC; border-radius:16px; padding:26px">
-          <div style="font-family:'Raleway',sans-serif; font-weight:800; font-size:14px; color:#12699A; letter-spacing:0.08em; margin-bottom:12px">FAZA 2</div>
+          <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; color:#12699A; letter-spacing:0.08em; margin-bottom:12px">FAZA 2</div>
           <h3 style="font-size:20px; margin-bottom:10px">Rehabilitaciona faza</h3>
           <p style="font-size:16.5px; line-height:1.6; color:#42525F">Izaberi aktivnu terapiju na osnovu nalaza i postepeno povećavaj toleranciju, kontrolu i kapacitet.</p>
         </div>
         <div style="background:#F1F5F8; border:1px solid #DCE5EC; border-radius:16px; padding:26px">
-          <div style="font-family:'Raleway',sans-serif; font-weight:800; font-size:14px; color:#12699A; letter-spacing:0.08em; margin-bottom:12px">FAZA 3</div>
+          <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; color:#12699A; letter-spacing:0.08em; margin-bottom:12px">FAZA 3</div>
           <h3 style="font-size:20px; margin-bottom:10px">Povratak opterećenju</h3>
           <p style="font-size:16.5px; line-height:1.6; color:#42525F">Poveži kliničku rehabilitaciju sa zahtevima posla, teretane ili sporta.</p>
         </div>
       </div>
-      <p style="margin-top:28px; font-family:'Raleway',sans-serif; font-weight:700; font-size:19px; line-height:1.5; color:#0E3F6E; max-width:66ch">Jasni kriterijumi ove metodologije pomažu terapeutu da doslednije proceni kada je pacijent spreman za sledeću fazu.</p>
+      <p style="margin-top:28px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19px; line-height:1.5; color:#0E3F6E; max-width:66ch">Jasni kriterijumi ove metodologije pomažu terapeutu da doslednije proceni kada je pacijent spreman za sledeću fazu.</p>
       <blockquote style="margin:22px 0 0; border-left:3px solid #79C04A; padding-left:20px; font-size:18px; line-height:1.5; color:#42525F; max-width:52ch">Privremeno olakšanje nije isto što i vraćanje kapaciteta.</blockquote>
       <h3 style="font-size:clamp(21px,2.4vw,26px); line-height:1.2; margin:clamp(36px,4vw,48px) 0 20px">Šta ćeš moći da uradiš posle svakog koraka</h3>
       <ul style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:14px">
@@ -167,8 +165,8 @@
         <li style="display:grid; grid-template-columns:22px 1fr; gap:14px; background:#fff; border:1px solid #DCE5EC; border-radius:14px; padding:20px; font-size:16.5px; line-height:1.55"><span style="color:#79C04A; font-weight:700">→</span><span>Menjaš fazu na osnovu definisanih kriterijuma, a ne samo prema osećaju.</span></li>
         <li style="display:grid; grid-template-columns:22px 1fr; gap:14px; background:#fff; border:1px solid #DCE5EC; border-radius:14px; padding:20px; font-size:16.5px; line-height:1.55"><span style="color:#79C04A; font-weight:700">→</span><span>Povezuješ kliničku rehabilitaciju sa povratkom poslu, teretani ili sportu.</span></li>
       </ul>
-      <p style="margin-top:24px; font-family:'Raleway',sans-serif; font-weight:700; font-size:19px; line-height:1.45; color:#0E3F6E">Odlaziš sa sistemom koji možeš da primeniš već od ponedeljka.</p>
-      <div style="margin-top:26px"><a href="#program" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 26px; border:1px solid #12699A; color:#12699A; border-radius:14px; font-family:'Raleway',sans-serif; font-weight:700; font-size:16px" style-hover="background:#12699A; color:#fff">Pogledaj program oba dana</a></div>
+      <p style="margin-top:24px; font-family:'Archivo',sans-serif; font-weight:700; font-size:19px; line-height:1.45; color:#0E3F6E">Odlaziš sa sistemom koji možeš da primeniš već od ponedeljka.</p>
+      <div style="margin-top:26px"><a href="#program" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 26px; border:1px solid #12699A; color:#12699A; border-radius:14px; font-family:'Archivo',sans-serif; font-weight:700; font-size:16px" style-hover="background:#12699A; color:#fff">Pogledaj program oba dana</a></div>
       <p style="margin-top:22px; font-size:15px; line-height:1.6; color:#5C6A75; max-width:70ch">Kriterijumi predstavljaju praktične kliničke standarde ove metodologije koji omogućavaju doslednije praćenje pacijenta. Ne predstavljaju univerzalne ili naučno validirane granice primenljive na svakog pacijenta bez individualne procene.</p>
     </div>
   </section>
@@ -195,7 +193,7 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:20px">
         <div style="background:#fff; border:1px solid #BFD0DE; border-radius:16px; padding:28px; box-shadow:0 2px 0 #DCE5EC">
           <div style="display:grid; justify-items:start; gap:12px; margin-bottom:18px">
-            <span style="flex:none; white-space:nowrap; font-family:'Raleway',sans-serif; font-weight:800; font-size:13px; letter-spacing:0.1em; color:#fff; background:#0E3F6E; padding:6px 12px; border-radius:100px">DAN 1</span>
+            <span style="flex:none; white-space:nowrap; font-family:'Archivo',sans-serif; font-weight:800; font-size:13px; letter-spacing:0.1em; color:#fff; background:#0E3F6E; padding:6px 12px; border-radius:100px">DAN 1</span>
             <h3 style="font-size:22px">Procena i dijagnostika</h3>
           </div>
           <ol style="display:grid">
@@ -209,7 +207,7 @@
         </div>
         <div style="background:#fff; border:1px solid #BFD0DE; border-radius:16px; padding:28px; box-shadow:0 2px 0 #DCE5EC">
           <div style="display:grid; justify-items:start; gap:12px; margin-bottom:18px">
-            <span style="flex:none; white-space:nowrap; font-family:'Raleway',sans-serif; font-weight:800; font-size:13px; letter-spacing:0.1em; color:#fff; background:#0E3F6E; padding:6px 12px; border-radius:100px">DAN 2</span>
+            <span style="flex:none; white-space:nowrap; font-family:'Archivo',sans-serif; font-weight:800; font-size:13px; letter-spacing:0.1em; color:#fff; background:#0E3F6E; padding:6px 12px; border-radius:100px">DAN 2</span>
             <h3 style="font-size:22px">Terapija i primena</h3>
           </div>
           <ol style="display:grid">
@@ -222,7 +220,7 @@
           </ol>
         </div>
       </div>
-      <p style="margin-top:26px; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.5; color:#0E3F6E; max-width:70ch; border-left:3px solid #79C04A; padding-left:20px">Teorija se obrađuje samo u meri u kojoj pomaže da razumeš i doneseš bolju odluku. Veliki deo oba dana posvećen je praktičnom radu.</p>
+      <p style="margin-top:26px; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.5; color:#0E3F6E; max-width:70ch; border-left:3px solid #79C04A; padding-left:20px">Teorija se obrađuje samo u meri u kojoj pomaže da razumeš i doneseš bolju odluku. Veliki deo oba dana posvećen je praktičnom radu.</p>
     </div>
   </section>
 
@@ -276,7 +274,7 @@
           </div>
           <aside style="border-left:3px solid #79C04A; padding-left:22px">
             <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#5C6A75; margin-bottom:8px">Princip edukacije</div>
-            <p style="font-family:'Raleway',sans-serif; font-weight:700; font-size:20px; line-height:1.45; color:#0E3F6E">Cilj nije da zapamtiš koju vežbu predavač koristi, već da razumeš zašto je izabrana.</p>
+            <p style="font-family:'Archivo',sans-serif; font-weight:700; font-size:20px; line-height:1.45; color:#0E3F6E">Cilj nije da zapamtiš koju vežbu predavač koristi, već da razumeš zašto je izabrana.</p>
           </aside>
         </div>
       </div>
@@ -335,7 +333,7 @@
       </div>
 
       <div style="background:#12507F; border:1px solid #2C5F8F; border-radius:20px; padding:clamp(26px,4vw,40px)">
-        <div style="font-family:'Raleway',sans-serif; font-weight:800; font-size:clamp(44px,6vw,64px); line-height:1; color:#79C04A; margin-bottom:10px">399 €</div>
+        <div style="font-family:'Archivo',sans-serif; font-weight:800; font-size:clamp(44px,6vw,64px); line-height:1; color:#79C04A; margin-bottom:10px">399 €</div>
         <p style="font-size:17px; line-height:1.6; color:#E6EEF5; margin-bottom:20px">Plaćanje se vrši uplatom na račun.</p>
         <p style="font-size:16.5px; line-height:1.6; color:#fff; font-weight:700; margin-bottom:16px">31.10. i 1.11.2026. · Lokomoto Centar, Tabanovačka 27b, Beograd · Maksimalno 20 polaznika</p>
         <p style="font-size:16.5px; line-height:1.6; color:#E6EEF5; border-left:3px solid #79C04A; padding-left:18px; margin-bottom:28px; max-width:66ch">Broj mesta je ograničen na 20 kako bi svaki polaznik učestvovao u praktičnom radu i dobio direktnu korekciju predavača.</p>
@@ -348,7 +346,7 @@
           <li style="display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:15.5px; line-height:1.55; color:#BFD3E3"><span style="color:#79C04A">·</span><span><strong style="color:#fff">Potvrda:</strong> dobijaš potvrdu o prisustvu. Edukacija ne nosi stručne bodove.</span></li>
           <li style="display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:15.5px; line-height:1.55; color:#BFD3E3"><span style="color:#79C04A">·</span><span><strong style="color:#fff">Otkazivanje:</strong> puna refundacija je moguća najkasnije mesec dana pre početka edukacije. Nakon tog roka uplata se ne refundira.</span></li>
         </ul>
-        <a href="#forma" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 30px; background:#12699A; color:#fff; border-radius:14px; font-family:'Raleway',sans-serif; font-weight:700; font-size:17px" style-hover="background:#0D5480">Prijavi se na edukaciju</a>
+        <a href="#forma" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 30px; background:#79C04A; color:#0E3F6E; border-radius:14px; font-family:'Archivo',sans-serif; font-weight:700; font-size:17px" style-hover="background:#5FA234">Prijavi se na edukaciju</a>
         <p style="margin-top:14px; font-size:15px; line-height:1.6; color:#A8C2D6; max-width:66ch">Popunjavanje traje oko minut. Prijava ne izvršava naplatu.</p>
       </div>
     </div>
@@ -359,51 +357,51 @@
       <h2 style="font-size:clamp(27px,3.6vw,42px); line-height:1.14; margin-bottom:32px">Cena, bodovi, otkazivanje i ostala pitanja</h2>
       <div style="display:grid; gap:12px">
         <details style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Već sam bio na kursevima za leđa. Šta je ovde drugačije?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Već sam bio na kursevima za leđa. Šta je ovde drugačije?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Fokus nije na novim tehnikama nego na sistemu odlučivanja koji povezuje ono što već znaš. Problem je najčešće izbor i redosled, ne broj vežbi.</p>
         </details>
         <details style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Imam malo iskustva. Da li je edukacija za mene?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Imam malo iskustva. Da li je edukacija za mene?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Da, potrebno je osnovno poznavanje anatomije i principa rada. Publika je namerno mešovita: početnici dobijaju osnovu, iskusniji organizuju postojeće znanje.</p>
         </details>
         <details style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Radim sa sportistima, a ne sa akutnim pacijentima.</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Radim sa sportistima, a ne sa akutnim pacijentima.</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Edukacija pokriva i prelazak u trening sa spoljnim opterećenjem: trake, bučice, šipka, hex bar, kablovi i pliometrija, uz kriterijume za povratak punom treningu.</p>
         </details>
         <details style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Da li mogu odmah da primenim naučeno?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Da li mogu odmah da primenim naučeno?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Dobijaš gotove obrasce, tabele i liste za proveru, a testove praktično uvežbavaš tokom edukacije.</p>
         </details>
         <details style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Da li je edukacija previše teorijska?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Da li je edukacija previše teorijska?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Teorija se obrađuje samo u meri u kojoj objašnjava odluke. Veliki deo oba dana posvećen je testiranju i analizi slučajeva.</p>
         </details>
         <details style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Da li edukacija garantuje rezultate kod svakog pacijenta?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Da li edukacija garantuje rezultate kod svakog pacijenta?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Ne. Nijedan sistem to ne može. Edukacija daje strukturu za procenu i odlučivanje, ali se svaki slučaj i dalje procenjuje individualno.</p>
         </details>
         <details style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Da li dobijam sertifikat?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Da li dobijam sertifikat?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Dobijaš potvrdu o prisustvu. Potvrda ne nosi stručne bodove i ne zamenjuje formalno obrazovanje ili licencu.</p>
         </details>
         <details style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Šta je uključeno u cenu?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Šta je uključeno u cenu?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Dva dana edukacije, praktičan rad, skripta i handout materijali, obrasci i liste za proveru, WhatsApp grupa i potvrda o prisustvu.</p>
         </details>
         <details style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Zašto edukacija košta 399 €?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Zašto edukacija košta 399 €?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Broj mesta je ograničen na 20 kako bi svaki polaznik radio u paru i dobio direktnu korekciju. To znači manju grupu i više vremena po polazniku nego na edukacijama sa velikim brojem prijavljenih. U cenu ulaze dva puna dana uživo, kompletni materijali i pristup WhatsApp grupi posle edukacije.</p>
         </details>
         <details style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Kako se vrši plaćanje?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Kako se vrši plaćanje?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Uplatom na račun. Nakon prijave dobijaš podatke i instrukcije za uplatu.</p>
         </details>
         <details id="privatnost" style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Kako se koriste podaci iz prijave?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Kako se koriste podaci iz prijave?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Podaci koje ostaviš u prijavi koriste se isključivo za organizaciju edukacije: potvrdu prijave, slanje instrukcija za uplatu i obaveštenja o rasporedu. Ne prosleđuju se trećim licima.</p>
         </details>
         <details id="otkazivanje" style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
-          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Šta se dešava ako ne mogu da prisustvujem?</summary>
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Archivo',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Šta se dešava ako ne mogu da prisustvujem?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Puna refundacija je moguća ako otkažeš najkasnije mesec dana pre edukacije. Nakon tog roka gubi se pravo na refundaciju.</p>
         </details>
       </div>
@@ -428,7 +426,6 @@
                 <option value="Fizioterapeut">Fizioterapeut</option>
                 <option value="Trener">Trener</option>
                 <option value="Fizijatar">Fizijatar</option>
-                <option value="Student">Student</option>
                 <option value="Drugo">Drugo</option>
               </select>
               <sc-if value="{{ errZanimanje }}" hint-placeholder-val="{{ false }}"><span style="font-size:13px; font-weight:400; color:#B3261E">{{ errZanimanje }}</span></sc-if>
@@ -449,7 +446,7 @@
               <span>Upoznat/a sam sa <a href="politika-privatnosti.html" style="color:#12699A; font-weight:700; text-decoration:underline">Politikom privatnosti</a> i saglasan/na sa obradom podataka u svrhu prijave. Upoznat/a sam i sa <a href="politika-otkazivanja.html" style="color:#12699A; font-weight:700; text-decoration:underline">politikom otkazivanja</a>.</span>
             </label>
             <sc-if value="{{ errSaglasnost }}" hint-placeholder-val="{{ false }}"><span style="grid-column:1/-1; font-size:13px; color:#B3261E">{{ errSaglasnost }}</span></sc-if>
-            <button type="submit" style="grid-column:1/-1; min-height:52px; margin-top:8px; padding:0 24px; background:#12699A; color:#fff; border:none; border-radius:14px; font-family:'Raleway',sans-serif; font-weight:700; font-size:17px; cursor:pointer" style-hover="background:#0D5480">Pošalji prijavu</button>
+            <button type="submit" style="grid-column:1/-1; min-height:52px; margin-top:8px; padding:0 24px; background:#12699A; color:#fff; border:none; border-radius:14px; font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; cursor:pointer" style-hover="background:#0D5480">Pošalji prijavu</button>
             <p style="grid-column:1/-1; font-size:14.5px; line-height:1.55; color:#5C6A75">U finalnoj verziji, nakon slanja prijave, polaznik dobija instrukcije za uplatu i potvrdu rezervacije mesta.</p>
             <p style="grid-column:1/-1; font-size:14.5px; line-height:1.55; color:#5C6A75"><a href="politika-privatnosti.html" style="color:#12699A; font-weight:700">Politika privatnosti</a> · <a href="politika-otkazivanja.html" style="color:#12699A; font-weight:700">Politika otkazivanja</a></p>
             <sc-if value="{{ formStatus }}" hint-placeholder-val="{{ false }}"><p style="grid-column:1/-1; font-size:15px; line-height:1.6; color:#0E3F6E; font-weight:700">{{ formStatus }}</p></sc-if>
@@ -468,7 +465,7 @@
         <li>Lokomoto Centar, Beograd</li>
         <li>399 €</li>
       </ul>
-      <a href="#forma" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 30px; background:#12699A; color:#fff; border-radius:14px; font-family:'Raleway',sans-serif; font-weight:700; font-size:17px" style-hover="background:#0D5480">Prijavi se na edukaciju</a>
+      <a href="#forma" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 30px; background:#12699A; color:#fff; border-radius:14px; font-family:'Archivo',sans-serif; font-weight:700; font-size:17px" style-hover="background:#0D5480">Prijavi se na edukaciju</a>
     </div>
   </section>
 
@@ -478,7 +475,7 @@
     <div style="max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:32px">
       <div>
         <span style="display:inline-flex; background:#fff; border-radius:12px; padding:10px 12px; margin-bottom:16px"><img src="mediji/logo.png" alt="Lokomoto Centar" width="140" height="48" style="height:48px; width:auto; display:block"></span>
-        <p style="font-family:'Raleway',sans-serif; font-weight:700; font-size:17px; color:#fff">Lokomoto Centar</p>
+        <p style="font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; color:#fff">Lokomoto Centar</p>
         <p style="font-size:15.5px; line-height:1.6">Fizikalna terapija i rehabilitacija</p>
         <p style="font-size:15.5px; line-height:1.6">Tabanovačka 27b, Beograd</p>
       </div>
@@ -502,7 +499,7 @@
 
   <sc-if value="{{ showSticky }}" hint-placeholder-val="{{ false }}">
     <div style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#0E3F6E; border-top:1px solid #2C5F8F; padding:10px 20px calc(10px + env(safe-area-inset-bottom))">
-      <a href="#prijava" style="display:flex; align-items:center; justify-content:center; min-height:48px; padding:0 22px; background:#12699A; color:#fff; border-radius:12px; font-family:'Raleway',sans-serif; font-weight:700; font-size:16px" style-hover="background:#0D5480">{{ stickyLabel }}</a>
+      <a href="#prijava" style="display:flex; align-items:center; justify-content:center; min-height:48px; padding:0 22px; background:#12699A; color:#fff; border-radius:12px; font-family:'Archivo',sans-serif; font-weight:700; font-size:16px" style-hover="background:#0D5480">{{ stickyLabel }}</a>
     </div>
   </sc-if>
 
@@ -582,7 +579,7 @@ class Component extends DCLogic {
       toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
       closeMenu: () => this.setState({ menuOpen: false }),
       showSticky: this.state.isMobile && this.state.pastHero && !this.state.offerVisible,
-      stickyLabel: "Rezerviši svoje mesto",
+      stickyLabel: "Cena i prijava",
     };
   }
 }
