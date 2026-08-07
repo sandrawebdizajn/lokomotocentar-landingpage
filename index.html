@@ -116,7 +116,7 @@
     <div style="max-width:1180px; margin:0 auto; padding:clamp(56px,7vw,84px) clamp(20px,4vw,24px)">
       <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#12699A; margin-bottom:16px">Problem nije nedostatak tehnika</div>
       <h2 style="font-size:clamp(27px,3.6vw,42px); line-height:1.14; max-width:36ch; margin-bottom:22px">Znaš mnogo vežbi.<br>Ali kako biraš pravu za pacijenta ispred sebe?</h2>
-      <p style="font-size:18px; line-height:1.65; color:#42525F; max-width:65ch; margin-bottom:36px">Već poznaješ anatomiju, testove i različite tehnike. Problem nastaje kada sve to treba povezati u odluku koja odgovara nalazu i trenutnom kapacitetu konkretnog pacijenta.</p>
+      <p style="font-size:18px; line-height:1.65; color:#42525F; max-width:none; margin-bottom:36px">Već poznaješ anatomiju, testove i različite tehnike.<br>Problem nastaje kada sve to treba povezati u odluku koja odgovara nalazu i trenutnom kapacitetu konkretnog pacijenta.</p>
       <ol style="display:grid; border-top:1px solid #DCE5EC; max-width:900px">
         <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; color:#12699A">01</span><span style="font-size:17px; line-height:1.55">Ista terapija kod jednog pacijenta daje rezultat, a kod drugog ne, bez jasnog objašnjenja zašto.</span></li>
         <li style="display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:baseline; padding:16px 0; border-bottom:1px solid #DCE5EC"><span style="font-family:'Archivo',sans-serif; font-weight:800; font-size:14px; color:#12699A">02</span><span style="font-size:17px; line-height:1.55">Nisi siguran koju vežbu da izabereš za trenutni nalaz i kapacitet pacijenta.</span></li>
@@ -128,7 +128,7 @@
         <h3 style="font-size:clamp(24px,3.2vw,36px); line-height:1.12; margin-bottom:20px">Vežba nije rešenje. Vežba je alat.</h3>
         <p style="font-size:18px; line-height:1.65; color:#BFD3E3; max-width:65ch; margin-bottom:26px">Ova edukacija ne daje još jednu listu vežbi za određenu dijagnozu. Uči te kako da prikupiš relevantne informacije, protumačiš nalaz, izabereš odgovarajući alat i proceniš kada je vreme za sledeći korak.</p>
         <blockquote style="margin:0 0 20px; border-left:3px solid #79C04A; padding-left:22px; font-family:'Archivo',sans-serif; font-weight:700; font-size:clamp(19px,2.2vw,25px); line-height:1.4; color:#79C04A">Razlika je kao između nekoga ko ima recept i nekoga ko ume da kuva.</blockquote>
-        <p style="font-size:17.5px; line-height:1.6; color:#E6EEF5; max-width:60ch">Onaj ko razume proces može da se prilagodi i situaciji koju ranije nije video.</p>
+        <p style="font-size:17.5px; line-height:1.6; color:#E6EEF5; max-width:none">Onaj ko razume proces može da se prilagodi i situaciji koju ranije nije video.</p>
       </div>
     </div>
   </section>
@@ -447,7 +447,7 @@
             </label>
             <sc-if value="{{ errSaglasnost }}" hint-placeholder-val="{{ false }}"><span style="grid-column:1/-1; font-size:13px; color:#B3261E">{{ errSaglasnost }}</span></sc-if>
             <button type="submit" style="grid-column:1/-1; min-height:52px; margin-top:8px; padding:0 24px; background:#12699A; color:#fff; border:none; border-radius:14px; font-family:'Archivo',sans-serif; font-weight:700; font-size:17px; cursor:pointer" style-hover="background:#0D5480">Pošalji prijavu</button>
-            <p style="grid-column:1/-1; font-size:14.5px; line-height:1.55; color:#5C6A75">U finalnoj verziji, nakon slanja prijave, polaznik dobija instrukcije za uplatu i potvrdu rezervacije mesta.</p>
+            <p style="grid-column:1/-1; font-size:14.5px; line-height:1.55; color:#5C6A75">Nakon slanja prijave, dobijaš instrukcije za uplatu i potvrdu rezervacije mesta.</p>
             <p style="grid-column:1/-1; font-size:14.5px; line-height:1.55; color:#5C6A75"><a href="politika-privatnosti.html" style="color:#12699A; font-weight:700">Politika privatnosti</a> · <a href="politika-otkazivanja.html" style="color:#12699A; font-weight:700">Politika otkazivanja</a></p>
             <sc-if value="{{ formStatus }}" hint-placeholder-val="{{ false }}"><p style="grid-column:1/-1; font-size:15px; line-height:1.6; color:#0E3F6E; font-weight:700">{{ formStatus }}</p></sc-if>
           </form>
