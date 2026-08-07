@@ -307,6 +307,7 @@
               <li style="font-size:16.5px; line-height:1.55; color:#BFD3E3">Lokomoto Centar, Tabanovačka 27b, Beograd</li>
               <li style="font-size:16.5px; line-height:1.55; color:#BFD3E3">Maksimalno 20 polaznika</li>
             </ul>
+            
             <p style="font-size:16.5px; line-height:1.6; color:#fff; border-left:3px solid #79C04A; padding-left:18px; margin-bottom:24px">Broj mesta je ograničen na 20 kako bi svaki polaznik mogao da učestvuje u praktičnom radu i dobije direktnu korekciju predavača.</p>
             <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
               <a href="#forma" style="display:flex; align-items:center; justify-content:center; min-height:52px; padding:0 28px; margin-bottom:14px; background:#12699A; color:#fff; border-radius:14px; font-family:'Raleway',sans-serif; font-weight:700; font-size:17px" style-hover="background:#0D5480">Popuni prijavu</a>
@@ -344,7 +345,7 @@
             </label>
             <label style="grid-column:1/-1; display:grid; grid-template-columns:22px 1fr; gap:12px; align-items:start; font-size:14.5px; line-height:1.5; color:#42525F; margin-top:8px">
               <input name="saglasnost" type="checkbox" style="width:20px; height:20px; margin-top:2px; accent-color:#12699A">
-              <span>Saglasan sam sa obradom podataka potrebnih za prijavu i upoznat sam sa politikom otkazivanja.</span>
+              <span>Saglasan sam sa obradom podataka potrebnih za prijavu i upoznat sam sa <a href="politika-otkazivanja.html" style="color:#12699A; font-weight:700">politikom otkazivanja</a>.</span>
             </label>
             <span style="grid-column:1/-1; font-size:13px; color:#B3261E">{{ errSaglasnost }}</span>
             <button type="submit" style="grid-column:1/-1; min-height:52px; margin-top:8px; padding:0 24px; background:#12699A; color:#fff; border:none; border-radius:14px; font-family:'Raleway',sans-serif; font-weight:700; font-size:17px; cursor:pointer" style-hover="background:#0D5480">Pošalji prijavu</button>
@@ -396,6 +397,10 @@
           <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Kako se vrši plaćanje?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Uplatom na račun. Nakon prijave dobijaš podatke i instrukcije za uplatu.</p>
         </details>
+        <details id="privatnost" style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
+          <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Kako se koriste podaci iz prijave?</summary>
+          <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Podaci koje ostaviš u prijavi koriste se isključivo za organizaciju edukacije: potvrdu prijave, slanje instrukcija za uplatu i obaveštenja o rasporedu. Ne prosleđuju se trećim licima.</p>
+        </details>
         <details id="otkazivanje" style="border:1px solid #DCE5EC; border-radius:14px; padding:18px 22px; background:#F1F5F8">
           <summary style="display:flex; gap:16px; justify-content:space-between; align-items:baseline; font-family:'Raleway',sans-serif; font-weight:700; font-size:18px; line-height:1.45; color:#0E3F6E"><span style="order:2; color:#12699A; font-size:22px; line-height:1">+</span>Šta se dešava ako ne mogu da prisustvujem?</summary>
           <p style="margin-top:12px; font-size:16.5px; line-height:1.65; color:#2B3A47">Puna refundacija je moguća ako otkažeš najkasnije mesec dana pre edukacije. Nakon tog roka gubi se pravo na refundaciju.</p>
@@ -408,6 +413,35 @@
     <div style="max-width:900px; margin:0 auto; padding:clamp(56px,7vw,84px) clamp(20px,4vw,24px); text-align:center">
       <h2 style="font-size:clamp(26px,3.4vw,40px); line-height:1.16; margin-bottom:20px">Od prvog testa do povratka punom opterećenju.</h2>
       <p style="font-size:18px; line-height:1.65; color:#42525F; max-width:60ch; margin:0 auto 28px">Od procene i izbora terapije do jasne progresije i povratka punom opterećenju.</p>
+      <div style="margin-bottom:36px; padding:clamp(28px,4vw,40px) clamp(20px,3vw,32px); background:#0E3F6E; border-radius:20px">
+        <p style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#A8C2D6; margin-bottom:24px">Do početka edukacije</p>
+        <ul style="display:flex; flex-wrap:wrap; justify-content:center; gap:clamp(16px,3vw,32px)">
+          <li style="display:grid; justify-items:center; gap:12px">
+            <span style="width:clamp(84px,11vw,116px); aspect-ratio:1; border-radius:50%; display:grid; place-items:center; background:{{ ringDani }}">
+              <span style="width:84%; aspect-ratio:1; border-radius:50%; background:#0E3F6E; display:grid; place-items:center; font-family:'Raleway',sans-serif; font-weight:800; font-size:clamp(26px,3.4vw,36px); color:#fff">{{ cdDani }}</span>
+            </span>
+            <span style="font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; color:#A8C2D6">Dana</span>
+          </li>
+          <li style="display:grid; justify-items:center; gap:12px">
+            <span style="width:clamp(84px,11vw,116px); aspect-ratio:1; border-radius:50%; display:grid; place-items:center; background:{{ ringSati }}">
+              <span style="width:84%; aspect-ratio:1; border-radius:50%; background:#0E3F6E; display:grid; place-items:center; font-family:'Raleway',sans-serif; font-weight:800; font-size:clamp(26px,3.4vw,36px); color:#fff">{{ cdSati }}</span>
+            </span>
+            <span style="font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; color:#A8C2D6">Sati</span>
+          </li>
+          <li style="display:grid; justify-items:center; gap:12px">
+            <span style="width:clamp(84px,11vw,116px); aspect-ratio:1; border-radius:50%; display:grid; place-items:center; background:{{ ringMin }}">
+              <span style="width:84%; aspect-ratio:1; border-radius:50%; background:#0E3F6E; display:grid; place-items:center; font-family:'Raleway',sans-serif; font-weight:800; font-size:clamp(26px,3.4vw,36px); color:#fff">{{ cdMin }}</span>
+            </span>
+            <span style="font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; color:#A8C2D6">Min</span>
+          </li>
+          <li style="display:grid; justify-items:center; gap:12px">
+            <span style="width:clamp(84px,11vw,116px); aspect-ratio:1; border-radius:50%; display:grid; place-items:center; background:{{ ringSek }}">
+              <span style="width:84%; aspect-ratio:1; border-radius:50%; background:#0E3F6E; display:grid; place-items:center; font-family:'Raleway',sans-serif; font-weight:800; font-size:clamp(26px,3.4vw,36px); color:#fff">{{ cdSek }}</span>
+            </span>
+            <span style="font-size:12.5px; letter-spacing:0.12em; text-transform:uppercase; color:#A8C2D6">Sek</span>
+          </li>
+        </ul>
+      </div>
       <ul style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px 26px; margin-bottom:30px; font-size:17px; font-weight:700; color:#0E3F6E">
         <li>31.10. i 1.11.2026.</li>
         <li>Lokomoto Centar, Beograd</li>
@@ -435,8 +469,12 @@
         <a href="https://lokomoto.rs/" target="_blank" rel="noopener noreferrer" style="color:#E6EEF5">Posetite lokomoto.rs</a>
       </div>
       <div style="display:grid; gap:8px; font-size:15.5px; line-height:1.6; align-content:start">
-        <a href="#otkazivanje" style="color:#E6EEF5">Politika otkazivanja</a>
-        <span style="color:#7F9AB5">Politika privatnosti <span style="font-size:13px">(povezuje se u finalnoj verziji)</span></span>
+        <a href="politika-otkazivanja.html" style="color:#E6EEF5">Politika otkazivanja</a>
+        <a href="politika-privatnosti.html" style="color:#E6EEF5">Politika privatnosti</a>
+      </div>
+      <div style="display:grid; gap:8px; align-content:start">
+        <iframe title="Mapa: Lokomoto Centar, Tabanovačka 27b, Beograd" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2831.7055135198884!2d20.46579339103111!3d44.78680870379761!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a711dd74c29b9%3A0x73c801b07500ae41!2sLokomoto%20centar!5e0!3m2!1sen!2srs!4v1786101687888!5m2!1sen!2srs" loading="lazy" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen="{{ true }}" style="width:100%; height:170px; border:1px solid #2C5F8F; border-radius:12px; display:block"></iframe>
+        <a href="https://maps.google.com/?q=Lokomoto+centar+Tabanova%C4%8Dka+27b+Beograd" target="_blank" rel="noopener noreferrer" style="font-size:14.5px; color:#E6EEF5">Otvori u Google mapama</a>
       </div>
     </div>
     <div style="max-width:1180px; margin:28px auto 0; padding-top:20px; border-top:1px solid #2C5F8F; font-size:14px; color:#8CA3B7">© 2026. Lokomoto Centar. Sva prava zadržana.</div>
@@ -474,6 +512,7 @@ class Component extends DCLogic {
       }
       if (Object.keys(next).length) this.setState(next);
     };
+    this._tick = setInterval(() => this.forceUpdate(), 1000);
     window.addEventListener("resize", this._onResize);
     window.addEventListener("scroll", this._onScroll, { passive: true });
     this._onResize();
@@ -481,8 +520,28 @@ class Component extends DCLogic {
   }
 
   componentWillUnmount() {
+    clearInterval(this._tick);
     window.removeEventListener("resize", this._onResize);
     window.removeEventListener("scroll", this._onScroll);
+  }
+
+  cd() {
+    const diff = Math.max(0, new Date(2026, 9, 31, 9, 0, 0) - new Date());
+    const t = Math.floor(diff / 1000);
+    const pad = (n) => String(n).padStart(2, "0");
+    const d = Math.floor(t / 86400);
+    return {
+      d: d,
+      dPct: Math.min(1, d / 120),
+      h: pad(Math.floor(t / 3600) % 24),
+      m: pad(Math.floor(t / 60) % 60),
+      s: pad(t % 60),
+    };
+  }
+
+  ring(frac) {
+    const deg = Math.max(0, Math.min(1, frac || 0)) * 360;
+    return "conic-gradient(#79C04A 0deg " + deg.toFixed(1) + "deg, #2C5F8F " + deg.toFixed(1) + "deg 360deg)";
   }
 
   onSubmit = (e) => {
@@ -529,6 +588,14 @@ class Component extends DCLogic {
       closeMenu: () => this.setState({ menuOpen: false }),
       showSticky: this.state.isMobile && !this.state.formVisible,
       stickyLabel: this.state.pastPrice ? "Prijavi se | 399 €" : "Prijavi se",
+      cdDani: this.cd().d,
+      cdSati: this.cd().h,
+      cdMin: this.cd().m,
+      cdSek: this.cd().s,
+      ringDani: this.ring(this.cd().dPct),
+      ringSati: this.ring(Number(this.cd().h) / 24),
+      ringMin: this.ring(Number(this.cd().m) / 60),
+      ringSek: this.ring(Number(this.cd().s) / 60),
     };
   }
 }
