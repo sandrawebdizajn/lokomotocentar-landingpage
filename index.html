@@ -67,7 +67,7 @@
       </sc-if>
       <div style="display:flex; align-items:center; gap:10px; flex:none">
         <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
-          <a href="#prijava" style="display:inline-flex; align-items:center; min-height:48px; padding:0 20px; background:#12699A; color:#fff; border-radius:12px; font-weight:700; font-size:15px" style-hover="background:#0D5480">Prijavi se</a>
+          <a href="#forma" style="display:inline-flex; align-items:center; min-height:48px; padding:0 20px; background:#12699A; color:#fff; border-radius:12px; font-weight:700; font-size:15px" style-hover="background:#0D5480">Prijavi se</a>
         </sc-if>
         <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
           <button type="button" onClick="{{ toggleMenu }}" aria-label="Meni" aria-expanded="{{ menuOpen }}" style="width:48px; height:48px; display:grid; place-content:center; gap:5px; background:#fff; border:1px solid #DCE5EC; border-radius:12px; cursor:pointer">
@@ -194,9 +194,9 @@
       <h2 style="font-size:clamp(27px,3.6vw,42px); line-height:1.14; margin-bottom:36px">Od razumevanja bola do povratka treningu</h2>
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:20px">
         <div style="background:#fff; border:1px solid #BFD0DE; border-radius:16px; padding:28px; box-shadow:0 2px 0 #DCE5EC">
-          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px">
-            <span style="font-family:'Raleway',sans-serif; font-weight:800; font-size:13px; letter-spacing:0.1em; color:#fff; background:#0E3F6E; padding:6px 12px; border-radius:100px">DAN 1</span>
-            <h3 style="font-size:22px">Dan 1: Procena i dijagnostika</h3>
+          <div style="display:grid; justify-items:start; gap:12px; margin-bottom:18px">
+            <span style="flex:none; white-space:nowrap; font-family:'Raleway',sans-serif; font-weight:800; font-size:13px; letter-spacing:0.1em; color:#fff; background:#0E3F6E; padding:6px 12px; border-radius:100px">DAN 1</span>
+            <h3 style="font-size:22px">Procena i dijagnostika</h3>
           </div>
           <ol style="display:grid">
             <li style="padding:14px 0; border-top:1px solid #E7EEF3; font-size:16.5px; line-height:1.55">Bol, pokret, kapacitet i tolerancija tkiva.</li>
@@ -208,9 +208,9 @@
           </ol>
         </div>
         <div style="background:#fff; border:1px solid #BFD0DE; border-radius:16px; padding:28px; box-shadow:0 2px 0 #DCE5EC">
-          <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px">
-            <span style="font-family:'Raleway',sans-serif; font-weight:800; font-size:13px; letter-spacing:0.1em; color:#fff; background:#0E3F6E; padding:6px 12px; border-radius:100px">DAN 2</span>
-            <h3 style="font-size:22px">Dan 2: Terapija i primena</h3>
+          <div style="display:grid; justify-items:start; gap:12px; margin-bottom:18px">
+            <span style="flex:none; white-space:nowrap; font-family:'Raleway',sans-serif; font-weight:800; font-size:13px; letter-spacing:0.1em; color:#fff; background:#0E3F6E; padding:6px 12px; border-radius:100px">DAN 2</span>
+            <h3 style="font-size:22px">Terapija i primena</h3>
           </div>
           <ol style="display:grid">
             <li style="padding:14px 0; border-top:1px solid #E7EEF3; font-size:16.5px; line-height:1.55">Proces razmišljanja terapeuta.</li>
@@ -582,7 +582,7 @@ class Component extends DCLogic {
       toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
       closeMenu: () => this.setState({ menuOpen: false }),
       showSticky: this.state.isMobile && this.state.pastHero && !this.state.offerVisible,
-      stickyLabel: "Prijavi se",
+      stickyLabel: "Rezerviši svoje mesto",
     };
   }
 }
