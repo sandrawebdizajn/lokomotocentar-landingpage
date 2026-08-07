@@ -498,7 +498,7 @@
   </footer>
 
   <sc-if value="{{ showSticky }}" hint-placeholder-val="{{ false }}">
-    <div style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#0E3F6E; border-top:1px solid #2C5F8F; padding:10px 20px; padding-bottom:calc(10px + env(safe-area-inset-bottom, 0px)); box-shadow:0 -6px 20px rgba(14,63,110,0.18); -webkit-transform:translateZ(0); transform:translateZ(0)">
+    <div style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#0E3F6E; border-top:1px solid #2C5F8F; padding:10px 20px; padding-bottom:calc(10px + min(env(safe-area-inset-bottom, 0px), 16px)); box-shadow:0 -6px 20px rgba(14,63,110,0.18); -webkit-transform:translateZ(0); transform:translateZ(0)">
       <a href="#prijava" style="display:flex; align-items:center; justify-content:center; min-height:48px; padding:0 22px; background:#12699A; color:#fff; border-radius:12px; font-family:'Archivo',sans-serif; font-weight:700; font-size:16px" style-hover="background:#0D5480">{{ stickyLabel }}</a>
     </div>
   </sc-if>
