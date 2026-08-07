@@ -31,6 +31,7 @@
 </script>
 <style>
   html { scroll-behavior:smooth; }
+  @media (max-width:899px) { body { padding-bottom:76px; } }
   [id] { scroll-margin-top:88px; }
   @media (max-width:900px) { [id] { scroll-margin-top:72px; } }
   body { margin:0; background:#F1F5F8; color:#16212B; font-family:'Source Sans 3',system-ui,sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
@@ -497,9 +498,9 @@
     <div style="max-width:1180px; margin:28px auto 0; padding-top:20px; border-top:1px solid #2C5F8F; font-size:14px; color:#8CA3B7">© 2026. Lokomoto Centar. Sva prava zadržana.</div>
   </footer>
 
-  <sc-if value="{{ showSticky }}" hint-placeholder-val="{{ false }}">
-    <div style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#0E3F6E; border-top:1px solid #2C5F8F; padding:10px 20px; padding-bottom:calc(10px + min(env(safe-area-inset-bottom, 0px), 16px)); box-shadow:0 -6px 20px rgba(14,63,110,0.18); -webkit-transform:translateZ(0); transform:translateZ(0)">
-      <a href="#prijava" style="display:flex; align-items:center; justify-content:center; min-height:48px; padding:0 22px; background:#12699A; color:#fff; border-radius:12px; font-family:'Archivo',sans-serif; font-weight:700; font-size:16px" style-hover="background:#0D5480">{{ stickyLabel }}</a>
+  <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+    <div style="position:fixed; left:0; right:0; bottom:0; z-index:50; background:#0E3F6E; border-top:1px solid #2C5F8F; padding:10px 16px; padding-bottom:max(10px, env(safe-area-inset-bottom, 10px)); box-shadow:0 -4px 16px rgba(0,0,0,0.08); transition:transform 0.25s ease; transform:{{ stickyTransform }}">
+      <a href="#prijava" style="display:flex; align-items:center; justify-content:center; min-height:48px; padding:14px 20px; background:#12699A; color:#fff; border-radius:12px; font-family:'Archivo',sans-serif; font-weight:700; font-size:16px; line-height:1" style-hover="background:#0D5480">{{ stickyLabel }}</a>
     </div>
   </sc-if>
 
@@ -578,7 +579,7 @@ class Component extends DCLogic {
       menuOpen: this.state.menuOpen,
       toggleMenu: () => this.setState((s) => ({ menuOpen: !s.menuOpen })),
       closeMenu: () => this.setState({ menuOpen: false }),
-      showSticky: this.state.isMobile && this.state.pastHero && !this.state.offerVisible,
+      stickyTransform: this.state.pastHero && !this.state.offerVisible ? "translateY(0)" : "translateY(110%)",
       stickyLabel: "Cena i prijava",
     };
   }
