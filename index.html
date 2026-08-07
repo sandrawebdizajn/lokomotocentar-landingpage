@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="sr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +17,12 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sr_RS">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://sandrawebdizajn.github.io/lokomotocentar-landingpage/">
+<meta property="og:url" content="https://sandrawebdizajn.github.io/lokomotocentar-landingpage/">
+<meta property="og:image" content="https://sandrawebdizajn.github.io/lokomotocentar-landingpage/mediji/og-lokomoto.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://sandrawebdizajn.github.io/lokomotocentar-landingpage/mediji/og-lokomoto.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700;800&amp;family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
@@ -25,6 +31,8 @@
 </script>
 <style>
   html { scroll-behavior:smooth; }
+  [id] { scroll-margin-top:88px; }
+  @media (max-width:900px) { [id] { scroll-margin-top:72px; } }
   body { margin:0; background:#F1F5F8; color:#16212B; font-family:'Lato',system-ui,sans-serif; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
   * { box-sizing:border-box; min-width:0; }
   img { max-width:100%; }
@@ -58,7 +66,9 @@
         </nav>
       </sc-if>
       <div style="display:flex; align-items:center; gap:10px; flex:none">
-        <a href="#prijava" style="display:inline-flex; align-items:center; min-height:48px; padding:0 20px; background:#12699A; color:#fff; border-radius:12px; font-weight:700; font-size:15px" style-hover="background:#0D5480">Prijavi se</a>
+        <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+          <a href="#prijava" style="display:inline-flex; align-items:center; min-height:48px; padding:0 20px; background:#12699A; color:#fff; border-radius:12px; font-weight:700; font-size:15px" style-hover="background:#0D5480">Prijavi se</a>
+        </sc-if>
         <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
           <button type="button" onClick="{{ toggleMenu }}" aria-label="Meni" aria-expanded="{{ menuOpen }}" style="width:48px; height:48px; display:grid; place-content:center; gap:5px; background:#fff; border:1px solid #DCE5EC; border-radius:12px; cursor:pointer">
             <span style="display:block; width:20px; height:2px; background:#0E3F6E"></span>
@@ -75,7 +85,8 @@
         <a href="#sta-dobijas" onClick="{{ closeMenu }}" style="padding:14px 0; border-bottom:1px solid #E7EEF3; font-size:16px; font-weight:700; color:#0E3F6E">Šta dobijaš</a>
         <a href="#predavac" onClick="{{ closeMenu }}" style="padding:14px 0; border-bottom:1px solid #E7EEF3; font-size:16px; font-weight:700; color:#0E3F6E">Predavač</a>
         <a href="#prijava" onClick="{{ closeMenu }}" style="padding:14px 0; border-bottom:1px solid #E7EEF3; font-size:16px; font-weight:700; color:#0E3F6E">Cena i prijava</a>
-        <a href="#faq" onClick="{{ closeMenu }}" style="padding:14px 0; font-size:16px; font-weight:700; color:#0E3F6E">Najčešća pitanja</a>
+        <a href="#faq" onClick="{{ closeMenu }}" style="padding:14px 0; border-bottom:1px solid #E7EEF3; font-size:16px; font-weight:700; color:#0E3F6E">Najčešća pitanja</a>
+        <a href="#forma" onClick="{{ closeMenu }}" style="margin-top:14px; display:flex; align-items:center; justify-content:center; min-height:48px; padding:0 20px; background:#12699A; color:#fff; border-radius:12px; font-weight:700; font-size:16px" style-hover="background:#0D5480">Prijavi se</a>
       </nav>
     </sc-if>
   </header>
@@ -86,7 +97,7 @@
     <div style="max-width:1180px; margin:0 auto; padding:clamp(28px,4vw,40px) clamp(20px,4vw,24px) clamp(48px,6vw,64px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:clamp(32px,4vw,52px); align-items:center">
       <div>
         <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#12699A; margin-bottom:18px">Dvodnevna edukacija uživo za fizioterapeute,<br>trenere i fizijatre</div>
-        <h1 style="font-size:clamp(32px,5vw,54px); line-height:1.08; margin-bottom:22px; max-width:19ch">Znaj tačno šta radiš sa svakim pacijentom sa bolom u leđima.</h1>
+        <h1 style="font-size:clamp(32px,5vw,54px); line-height:1.08; margin-bottom:22px; max-width:17ch">Od prvog testa do povratka punom opterećenju.</h1>
         <p style="font-size:19px; line-height:1.6; color:#42525F; max-width:62ch; margin-bottom:28px">Nauči kako da od nalaza dođeš do izbora terapije, kriterijuma za sledeću fazu i povratka punom opterećenju kod bola u donjem delu leđa.</p>
         <ul style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:18px 28px; margin-bottom:28px; padding-top:20px; border-top:1px solid #DCE5EC">
           <li style="display:grid; gap:4px"><span style="font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:#5C6A75">Kad?</span><span style="font-size:17px; font-weight:700; line-height:1.45; color:#0E3F6E">31.10. i 1.11.2026.</span></li>
@@ -98,9 +109,8 @@
           <a href="#program" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 30px; background:#12699A; color:#fff; border-radius:14px; font-family:'Raleway',sans-serif; font-weight:700; font-size:17px" style-hover="background:#0D5480">Pogledaj program edukacije</a>
           <a href="#prijava" style="display:inline-flex; align-items:center; min-height:52px; font-weight:700; font-size:16px; color:#0E3F6E; border-bottom:1px solid #C3D0DA" style-hover="color:#12699A; border-color:#12699A">Cena i šta je uključeno →</a>
         </div>
-        <p style="margin-top:18px; font-size:15.5px; line-height:1.55; color:#42525F; max-width:58ch">31.10. i 1.11.2026. · Lokomoto Centar, Beograd · Najviše 20 polaznika</p>
       </div>
-      <img src="mediji/foto-procena.jpg" alt="Novak Ilić izvodi praktičnu procenu kuka i donjeg ekstremiteta" width="1000" height="1250" style="width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:center 35%; border-radius:16px; display:block">
+      <img src="mediji/foto-procena.jpg" alt="Praktična procena kuka i donjeg ekstremiteta u Lokomoto centru" width="1000" height="1250" fetchPriority="high" decoding="async" style="width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:center 35%; border-radius:16px; display:block">
     </div>
   </section>
 
@@ -229,7 +239,7 @@
           <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; font-size:17px; font-weight:700; color:#fff"><span style="color:#79C04A">→</span><span>Analiza nalaza</span></li>
         </ul>
       </div>
-      <img src="mediji/foto-test-rame.jpg" alt="Praktično izvođenje testa ramena uz korekciju predavača" width="1000" height="1500" style="width:100%; height:100%; min-height:340px; object-fit:cover; display:block">
+      <img src="mediji/foto-test-rame.jpg" alt="Praktično izvođenje testa ramena uz korekciju terapeuta" width="1000" height="1500" style="width:100%; height:100%; min-height:340px; object-fit:cover; display:block">
     </div>
   </section>
 
@@ -254,7 +264,7 @@
   <section id="predavac" style="background:#F1F5F8; border-top:1px solid #DCE5EC">
     <div style="max-width:1180px; margin:0 auto; padding:clamp(56px,7vw,84px) clamp(20px,4vw,24px)">
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr)); gap:clamp(32px,4vw,52px); align-items:center">
-        <img src="mediji/novak-ilic.jpg" alt="Novak Ilić, fizioterapeut i osnivač Lokomoto centra" width="900" height="1350" loading="lazy" style="width:100%; height:auto; max-width:420px; aspect-ratio:3/4; object-fit:cover; border-radius:16px; display:block">
+        <img src="mediji/novak-ilic.jpg" alt="Novak Ilić, fizioterapeut i jedan od osnivača Lokomoto centra" width="900" height="1350" loading="lazy" style="width:100%; height:auto; max-width:420px; aspect-ratio:3/4; object-fit:cover; border-radius:16px; display:block">
         <div>
           <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#12699A; margin-bottom:16px">Znanje zasnovano na radu sa pacijentima</div>
           <h2 style="font-size:clamp(27px,3.6vw,42px); line-height:1.14; margin-bottom:22px">Edukaciju vodi Novak Ilić</h2>
@@ -264,26 +274,30 @@
             <p style="font-size:17.5px; line-height:1.65; color:#42525F">U okviru Lokomoto centra radi sa sportistima i rekreativcima, uz pristup koji obuhvata funkcionalnu dijagnostiku, individualno planiranu rehabilitaciju i kontrolisanu progresiju opterećenja.</p>
             <p style="font-size:17.5px; line-height:1.65; color:#42525F">Na edukaciji prenosi način razmišljanja koji povezuje nalaz, izbor terapije i sledeći korak u rehabilitaciji.</p>
           </div>
-          <blockquote style="margin:0 0 28px; border-left:3px solid #79C04A; padding-left:22px; font-family:'Raleway',sans-serif; font-weight:700; font-size:20px; line-height:1.45; color:#0E3F6E">„Cilj nije da zapamtiš koju vežbu koristim. Cilj je da razumeš zašto sam je izabrao.“</blockquote>
+          <aside style="border-left:3px solid #79C04A; padding-left:22px">
+            <div style="font-size:13px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#5C6A75; margin-bottom:8px">Princip edukacije</div>
+            <p style="font-family:'Raleway',sans-serif; font-weight:700; font-size:20px; line-height:1.45; color:#0E3F6E">Cilj nije da zapamtiš koju vežbu predavač koristi, već da razumeš zašto je izabrana.</p>
+          </aside>
         </div>
       </div>
       <div style="margin-top:clamp(36px,4vw,52px); display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr)); gap:clamp(28px,4vw,44px); align-items:start">
-        <div>
-              <h3 style="font-size:14px; letter-spacing:0.12em; text-transform:uppercase; color:#5C6A75; margin-bottom:12px">Stručna biografija</h3>
+        <div style="background:#F7FAFC; border:1px dashed #A8C2D6; border-radius:16px; padding:clamp(20px,3vw,26px)">
+              <h3 style="font-size:14px; letter-spacing:0.12em; text-transform:uppercase; color:#5C6A75; margin-bottom:10px">Podaci za dopunu pre finalnog objavljivanja</h3>
+              <p style="font-size:15.5px; line-height:1.6; color:#5C6A75; margin-bottom:6px">Za potpunije predstavljanje predavača, u finalnoj verziji bilo bi dobro dopuniti sledeće proverljive podatke.</p>
               <ul style="display:grid">
-              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:12px 0; border-top:1px solid #DCE5EC; font-size:16.5px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Više od 15 godina kliničke prakse</span></li>
-              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:12px 0; border-top:1px solid #DCE5EC; font-size:16.5px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Formalno obrazovanje i godina diplomiranja <span style="color:#8FA3B2">[POPUNITI — podaci od klijenta]</span></span></li>
-              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:12px 0; border-top:1px solid #DCE5EC; font-size:16.5px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Osteopatska škola i godina završetka <span style="color:#8FA3B2">[POPUNITI — podaci od klijenta]</span></span></li>
-              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:12px 0; border-top:1px solid #DCE5EC; font-size:16.5px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Sertifikacije i završene edukacije <span style="color:#8FA3B2">[POPUNITI — podaci od klijenta]</span></span></li>
-              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:12px 0; border-top:1px solid #DCE5EC; font-size:16.5px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Godina osnivanja Lokomoto centra <span style="color:#8FA3B2">[POPUNITI — podaci od klijenta]</span></span></li>
-              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:12px 0; border-top:1px solid #DCE5EC; font-size:16.5px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Ranije održane edukacije ili predavanja <span style="color:#8FA3B2">[POPUNITI — podaci od klijenta]</span></span></li>
-              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:12px 0; border-top:1px solid #DCE5EC; font-size:16.5px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Saradnja sa klubovima ili sportistima <span style="color:#8FA3B2">[POPUNITI — podaci od klijenta]</span></span></li>
+              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:11px 0; border-top:1px solid #DCE5EC; font-size:16px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Formalno obrazovanje i godina diplomiranja <span style="color:#8FA3B2">[POPUNITI: podaci od klijenta]</span></span></li>
+              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:11px 0; border-top:1px solid #DCE5EC; font-size:16px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Osteopatska škola i godina završetka <span style="color:#8FA3B2">[POPUNITI: podaci od klijenta]</span></span></li>
+              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:11px 0; border-top:1px solid #DCE5EC; font-size:16px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Sertifikacije i završene edukacije <span style="color:#8FA3B2">[POPUNITI: podaci od klijenta]</span></span></li>
+              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:11px 0; border-top:1px solid #DCE5EC; font-size:16px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Godina osnivanja Lokomoto centra <span style="color:#8FA3B2">[POPUNITI: podaci od klijenta]</span></span></li>
+              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:11px 0; border-top:1px solid #DCE5EC; font-size:16px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Ranije održane edukacije ili predavanja <span style="color:#8FA3B2">[POPUNITI: podaci od klijenta]</span></span></li>
+              <li style="display:grid; grid-template-columns:20px 1fr; gap:12px; padding:11px 0; border-top:1px solid #DCE5EC; font-size:16px; line-height:1.55; color:#42525F"><span style="color:#79C04A">→</span><span>Saradnja sa klubovima ili sportistima <span style="color:#8FA3B2">[POPUNITI: podaci od klijenta]</span></span></li>
               </ul>
         </div>
-        <img src="mediji/foto-predavac-rad.jpg" alt="Novak Ilić izvodi procenu kuka i kolena na pacijentu" width="1000" height="1250" loading="lazy" style="width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border-radius:16px; display:block">
+        <img src="mediji/foto-predavac-rad.jpg" alt="Praktična procena kuka i kolena u Lokomoto centru" width="1000" height="1250" loading="lazy" style="width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; border-radius:16px; display:block">
       </div>
       <div style="margin-top:clamp(20px,3vw,28px)">
-        <video src="mediji/video-lokomoto.mp4" poster="mediji/video-poster.jpg" controls="{{ true }}" preload="metadata" playsInline="{{ true }}" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:16px; display:block; background:#0E3F6E"></video>
+        <video src="mediji/video-lokomoto.mp4" poster="mediji/video-poster.jpg" controls="{{ true }}" preload="none" playsInline="{{ true }}" style="width:100%; aspect-ratio:16/9; object-fit:cover; border-radius:16px; display:block; background:#0E3F6E"></video>
+        <p style="margin-top:12px; font-size:15.5px; line-height:1.6; color:#5C6A75">Pogledajte prostor Lokomoto centra i deo praktičnog rada sa pacijentom.</p>
       </div>
     </div>
   </section>
@@ -323,18 +337,16 @@
       <div style="background:#12507F; border:1px solid #2C5F8F; border-radius:20px; padding:clamp(26px,4vw,40px)">
         <div style="font-family:'Raleway',sans-serif; font-weight:800; font-size:clamp(44px,6vw,64px); line-height:1; color:#79C04A; margin-bottom:10px">399 €</div>
         <p style="font-size:17px; line-height:1.6; color:#E6EEF5; margin-bottom:20px">Plaćanje se vrši uplatom na račun.</p>
-        <p style="font-size:17px; line-height:1.65; color:#BFD3E3; max-width:66ch; margin-bottom:24px">Cena pokriva oba dana rada uživo, praktičan deo u grupi od najviše 20 polaznika i sve materijale koje koristiš i posle edukacije. Nema dodatnih troškova kotizacije.</p>
         <p style="font-size:16.5px; line-height:1.6; color:#fff; font-weight:700; margin-bottom:16px">31.10. i 1.11.2026. · Lokomoto Centar, Tabanovačka 27b, Beograd · Maksimalno 20 polaznika</p>
         <p style="font-size:16.5px; line-height:1.6; color:#E6EEF5; border-left:3px solid #79C04A; padding-left:18px; margin-bottom:28px; max-width:66ch">Broj mesta je ograničen na 20 kako bi svaki polaznik učestvovao u praktičnom radu i dobio direktnu korekciju predavača.</p>
         <ul style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr)); gap:14px 28px; padding:20px 0; margin-bottom:26px; border-top:1px solid #2C5F8F; border-bottom:1px solid #2C5F8F">
           <li style="display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:15.5px; line-height:1.5; color:#BFD3E3"><span style="color:#79C04A">✓</span><span>Predavač sa 15+ godina prakse</span></li>
           <li style="display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:15.5px; line-height:1.5; color:#BFD3E3"><span style="color:#79C04A">✓</span><span>Slanje prijave ne izvršava naplatu</span></li>
-          <li style="display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:15.5px; line-height:1.5; color:#BFD3E3"><span style="color:#79C04A">✓</span><span>Puna refundacija do mesec dana pre početka</span></li>
+          <li style="display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:15.5px; line-height:1.5; color:#BFD3E3"><span style="color:#79C04A">✓</span><span>Nema dodatnih troškova kotizacije</span></li>
         </ul>
         <ul style="display:grid; gap:10px; margin-bottom:26px; max-width:70ch">
-          <li style="display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:15.5px; line-height:1.55; color:#BFD3E3"><span style="color:#79C04A">·</span><span><strong style="color:#fff">Šta ulazi u cenu:</strong> oba dana uživo, praktičan rad, svi materijali i WhatsApp grupa. Nema dodatnih troškova.</span></li>
           <li style="display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:15.5px; line-height:1.55; color:#BFD3E3"><span style="color:#79C04A">·</span><span><strong style="color:#fff">Potvrda:</strong> dobijaš potvrdu o prisustvu. Edukacija ne nosi stručne bodove.</span></li>
-          <li style="display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:15.5px; line-height:1.55; color:#BFD3E3"><span style="color:#79C04A">·</span><span><strong style="color:#fff">Otkazivanje:</strong> puna refundacija najkasnije mesec dana pre početka. Nakon tog roka uplata se ne refundira.</span></li>
+          <li style="display:grid; grid-template-columns:22px 1fr; gap:12px; font-size:15.5px; line-height:1.55; color:#BFD3E3"><span style="color:#79C04A">·</span><span><strong style="color:#fff">Otkazivanje:</strong> puna refundacija je moguća najkasnije mesec dana pre početka edukacije. Nakon tog roka uplata se ne refundira.</span></li>
         </ul>
         <a href="#forma" style="display:inline-flex; align-items:center; justify-content:center; min-height:52px; padding:0 30px; background:#12699A; color:#fff; border-radius:14px; font-family:'Raleway',sans-serif; font-weight:700; font-size:17px" style-hover="background:#0D5480">Prijavi se na edukaciju</a>
         <p style="margin-top:14px; font-size:15px; line-height:1.6; color:#A8C2D6; max-width:66ch">Popunjavanje traje oko minut. Prijava ne izvršava naplatu.</p>
@@ -434,11 +446,11 @@
             </label>
             <label style="grid-column:1/-1; display:grid; grid-template-columns:22px 1fr; gap:12px; align-items:start; font-size:14.5px; line-height:1.5; color:#42525F; margin-top:8px">
               <input name="saglasnost" type="checkbox" style="width:20px; height:20px; margin-top:2px; accent-color:#12699A">
-              <span>Saglasan sam sa obradom podataka potrebnih za prijavu i upoznat sam sa <a href="politika-otkazivanja.html" style="color:#12699A; font-weight:700">politikom otkazivanja</a>.</span>
+              <span>Upoznat/a sam sa <a href="politika-privatnosti.html" style="color:#12699A; font-weight:700; text-decoration:underline">Politikom privatnosti</a> i saglasan/na sa obradom podataka u svrhu prijave. Upoznat/a sam i sa <a href="politika-otkazivanja.html" style="color:#12699A; font-weight:700; text-decoration:underline">politikom otkazivanja</a>.</span>
             </label>
             <sc-if value="{{ errSaglasnost }}" hint-placeholder-val="{{ false }}"><span style="grid-column:1/-1; font-size:13px; color:#B3261E">{{ errSaglasnost }}</span></sc-if>
             <button type="submit" style="grid-column:1/-1; min-height:52px; margin-top:8px; padding:0 24px; background:#12699A; color:#fff; border:none; border-radius:14px; font-family:'Raleway',sans-serif; font-weight:700; font-size:17px; cursor:pointer" style-hover="background:#0D5480">Pošalji prijavu</button>
-            <p style="grid-column:1/-1; font-size:14.5px; line-height:1.55; color:#5C6A75">Nakon slanja prijave polaznik dobija instrukcije za uplatu i potvrdu rezervacije mesta.</p>
+            <p style="grid-column:1/-1; font-size:14.5px; line-height:1.55; color:#5C6A75">U finalnoj verziji, nakon slanja prijave, polaznik dobija instrukcije za uplatu i potvrdu rezervacije mesta.</p>
             <p style="grid-column:1/-1; font-size:14.5px; line-height:1.55; color:#5C6A75"><a href="politika-privatnosti.html" style="color:#12699A; font-weight:700">Politika privatnosti</a> · <a href="politika-otkazivanja.html" style="color:#12699A; font-weight:700">Politika otkazivanja</a></p>
             <sc-if value="{{ formStatus }}" hint-placeholder-val="{{ false }}"><p style="grid-column:1/-1; font-size:15px; line-height:1.6; color:#0E3F6E; font-weight:700">{{ formStatus }}</p></sc-if>
           </form>
